@@ -1,33 +1,10 @@
-import React from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  AppRegistry
 } from 'react-native';
-
-class HelloWorld extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.hello}>Hello, World, index1</Text>
-      </View>
-    );
-  }
-}
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center'
-  },
-  hello: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10
-  }
-});
+import { name as appName } from './app.json';
+import HelloWorld1 from './app1'
 
 AppRegistry.registerComponent(
-  'MyReactNativeApp',
-  () => HelloWorld
+  appName,
+  () => HelloWorld1
 );
